@@ -1,0 +1,20 @@
+{
+    "records":[
+        {
+            "name": "Teja",
+            "age": 27
+        },
+        {
+            "name": "Pramod",
+            "age": 30
+        },
+        {
+            "name": "Imran",
+            "age": 27
+        },
+        {
+            "name": "Seenu",
+            "age": 28
+        }
+    ]
+}
