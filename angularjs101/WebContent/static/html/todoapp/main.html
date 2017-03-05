@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AngularJS | TODOApp</title>
+<link data-require="bootstrap@*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script data-require="bootstrap@*" data-semver="3.3.7" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+<script src="./script.js"></script>
+<style>
+	.status-true{
+	    text-decoration: line-through;
+    	font-style: italic
+	}
+</style>
+</head>
+<body ng-app="todoApp" ng-controller="todoCtrl" class="container">
+	<h1>Add a Task</h1>
+	<input type="text" class="form-control" ng-model="task" ng-keyup="searchEnter()">
+	<div id="tasks">
+		<ul>
+			<li ng-repeat="tempTask in tasks track by $index">
+				<span class="status-{{tempTask.status}}">
+					<input type="checkbox" ng-model="tempTask.status">{{tempTask.msg}} 
+				</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
