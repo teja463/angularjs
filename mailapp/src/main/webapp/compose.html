@@ -1,0 +1,29 @@
+<form>
+	<div class="form-group">
+        <label for="to">From</label>
+        <input type="text" class="form-control" ng-model="from">
+    </div>
+    <div class="form-group">
+        <label for="to">To</label>
+        <input type="text" class="form-control" ng-model="to">
+    </div>
+     <div class="form-group">
+        <label for="cc">CC</label>
+        <input type="text" class="form-control" ng-model="cc">
+    </div>
+     <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" class="form-control" ng-model="subject">
+    </div>
+     <div class="form-group">
+        <label for="to">Message</label>
+        <textarea type="text" class="form-control" rows="14" ng-model="message"></textarea>
+    </div>
+    <button class="btn btn-primary btn-lg" ng-click="sendMail(from,to,cc,subject,message,'sent')">Send</button>
+    <button class="btn btn-info btn-lg" ng-click="sendMail(from,to,cc,subject,message,'draft')">Save as Draft</button>
+    <a class="btn btn-warning btn-lg" href="#/">Discard</a>
+</form>
+
+
+
+

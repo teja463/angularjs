@@ -1,0 +1,15 @@
+<div class="row col-md-12">
+	<h2>Drafts</h2>
+</div>
+<div class="row" ng-repeat="tMail in mails" ng-show="tMail.status == 'draft'">
+	<div class="row">
+		<div class="col-md-12" style="font-size: 18px;">{{tMail.from}}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" style="font-size: 18px;">{{tMail.subject}}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4" style="font-size: 14px;">{{tMail.message}}</div>
+	</div>
+	<hr/>
+</div>

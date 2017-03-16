@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> AngularJS | ngRoute2 </title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+    <script>
+	    var app = angular.module('secondApp',['ngRoute']);
+	    app.config(function($routeProvider){
+	        $routeProvider
+	        .when('/',{
+	            templateUrl: 'home.html'
+	        })
+	        .when('/helloUser',{
+	            templateUrl: 'helloUser.html'
+	        })
+	        .otherwise({
+	            redirectTo:'/'
+	        });
+	    });
+	    
+	    app.controller('ctrl',function($scope){
+	    	$scope.name="Teja";
+	    });
+	    
+    </script>
+</head>
+
+<body ng-app="secondApp" ng-controller="ctrl">
+	{{name}}
+    <div ng-view></div>
+</body>
+
+</html>
