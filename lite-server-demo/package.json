@@ -1,0 +1,16 @@
+{
+  "name": "lite-server-demo",
+  "version": "1.0.0",
+  "description": "Sample project to demo lite server",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run teja",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "teja": "lite-server"
+  },
+  "author": "Brahma Teja Ponnuru",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
