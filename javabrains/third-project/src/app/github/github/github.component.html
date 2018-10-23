@@ -1,0 +1,18 @@
+<div>
+  Username: <input type="text" [(ngModel)]="userName">
+</div>
+<div>
+  <button (click)="search()">Search</button>
+</div>
+
+
+<div *ngIf="response">
+  <div>
+    <img class="github-avtar" src="https://avatars3.githubusercontent.com/u/8640416?v=4">
+    <p>Name: {{response.name}} </p>
+  </div>
+  <p>Location: {{response.location}} </p>
+  <p>Followers: {{response.followers}} </p>
+  <p>Following: {{response.following}} </p>
+
+</div>

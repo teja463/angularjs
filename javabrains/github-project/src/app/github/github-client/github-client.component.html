@@ -1,0 +1,19 @@
+<div>
+  <label for="userName">Username:</label><input type="text" [(ngModel)]="userName">
+</div>
+<div>
+  <button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="response">
+  <span><img src="{{response.avatar_url}}" class="user-avatar"> {{response.name}}</span>
+  <div>
+    Location: {{response.location}}
+  </div>
+  <div>
+    Repos: {{response.public_repos}}
+  </div>
+  <div>
+    Gists: {{response.public_gists}}
+  </div>
+</div>

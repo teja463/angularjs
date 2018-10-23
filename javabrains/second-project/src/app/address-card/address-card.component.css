@@ -1,0 +1,17 @@
+.address-card{
+    border: 1px gray solid;
+    padding: 15px;
+}
+
+.title{
+    font-style: italic;
+}
+
+.phone{
+    border-left: 1px gray solid;
+    padding-left: 4px;
+}
+
+.expand-collapse-btn{
+    font-size: 1.5em;
+}
