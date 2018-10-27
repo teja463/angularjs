@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map, debounceTime, filter, switchMap } from "rxjs/operators";
+import { map, debounceTime, filter, switchMap, distinctUntilChanged } from "rxjs/operators";
 import { Subject } from "rxjs/Subject";
 
 @Component({
@@ -17,6 +17,7 @@ export class AppComponent {
     this.results = this.latestSearch.pipe(
       filter(term => !!term),
       debounceTime(500),
+      distinctUntilChanged(),
       switchMap(term =>
         this.httpClient.get(
           `https://api.github.com/search/repositories?q=${term}`
@@ -27,9 +28,6 @@ export class AppComponent {
   }
 
   search() {
-    // console.log(this.searchText);
-    // this.results = this.httpClient.get(`https://api.github.com/search/repositories?q=${this.searchText}`)
-    //   .pipe(map(response => response["items"].map(item => item.name)));
     this.latestSearch.next(this.searchText);
   }
 }
