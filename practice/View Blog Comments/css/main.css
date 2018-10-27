@@ -1,0 +1,11 @@
+@import url('./bootstrap.min.css');
+
+.blog{
+    border-top: 2px solid blue;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.time{
+    text-align: right;
+}
